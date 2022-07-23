@@ -1,0 +1,40 @@
+@require: stdjabook
+@require: sno2wman/sno2wman
+@require: enumitem/enumitem
+@require: easytable/easytable
+@require: code-printer/code-printer
+
+let-math \tower = ${\uparrow}
+let-math \tritri = ${3 \tower \tower \tower 3}
+let-math \googol = ${1 0^{1 0 0}}
+let-math \googolplex = ${1 0^{\googol}}
+in
+
+% @import: ../src/constants
+open EnumitemAlias in
+    open EasyTableAlias in
+        document(|
+            title = { satysfi-large-number };
+            author = { \SnO2WMaN; };
+            show-title = true;
+            show-toc = false;
+        |)'<
+            +section{ 概略 }<
+                +subsection{ 定数 }<
+                    +p{ よく使うであろう定数 }
+                    +easytable [c;c;c;]{
+                        |名称|コマンド|値
+                        |グーゴル | `\googol` | ${\googol}
+                        |グーゴルプレックス | `\googolplex` | ${\googolplex}
+                        |トリトリ | `\tritri` | ${\tritri}
+                        |}
+                >
+                +subsection{ 演算子 }<
+                    +p{ よく使うであろう演算子 }
+                    +easytable [c;l;c;]{
+                        |名称|コマンド|表示される式
+                        |タワー | `\tower` | ${\tower}
+                        |}
+                >
+            >
+        >

@@ -5,5 +5,6 @@ pkgs.satyxin.buildPackage {
   sources = {
     dirs = ["./src"];
   };
-  deps = [];
+  deps = [
+  ];
 }

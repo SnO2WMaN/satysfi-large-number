@@ -35,9 +35,13 @@
           satydist = pkgs.satyxin.buildSatydist {
             packages = [
               "fss"
+              "sno2wman"
+              "enumitem"
+              "code-printer"
+              "easytable"
             ];
             adhocPackages = with self.packages."${system}"; [
-              satyxin-package-large-number
+              # satyxin-package-large-number
             ];
           };
 
